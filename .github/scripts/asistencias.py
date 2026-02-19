@@ -81,6 +81,16 @@ for commit in commits:
 
     numero = alumnos[user]
 
+    print(f"Enviando al webhook: numero={numero}, columna={columna}, filaInicio={FILA_INICIO}")
+
+    print("===================================")
+    print(f"Usuario: {user}")
+    print(f"Numero: {numero}")
+    print(f"Columna: {columna}")
+    print(f"Fecha PR: {fecha_pr}")
+    print(f"Hora PR: {hora_pr}")
+    print("===================================")
+
     # =============================
     # Enviar a Google Sheets
     # =============================
@@ -101,6 +111,7 @@ for commit in commits:
         resp = urllib.request.urlopen(req_sheet)
         print(f"{user} registrado: {resp.read().decode()}")
         procesados += 1
+        print("Respuesta del webhook:", resp.read().decode())
     except Exception as e:
         print(f"Error enviando para {user}: {e}")
 
