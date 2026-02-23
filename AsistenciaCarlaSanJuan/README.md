@@ -1,1 +1,3 @@
-En esta carpeta ire marcando a asistencia de la asignatura de Bases de Datos I
+ASISTENCIAS:
+18/02/26
+23/02/26
